@@ -36,7 +36,6 @@ export const getMovieDetails = async (req, res) => {
     }
 }
 
-
 export const getSimilarMovies = async (req, res) => {
     const { id } = req.params;
     try {
@@ -48,7 +47,6 @@ export const getSimilarMovies = async (req, res) => {
         res.status(500).json({ success: false, error: error.message });
     }
 }
-
 
 export const getMoviesByCategory = async (req, res) => {
     const { category } = req.params;
