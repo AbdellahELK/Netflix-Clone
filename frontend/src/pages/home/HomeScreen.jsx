@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Info, Play } from "lucide-react";
 import { useState } from "react";
+import Navbar from "../../components/NavBar";
 
 const HomeScreen = () => {
 	
@@ -11,9 +12,9 @@ const HomeScreen = () => {
 				<Navbar />
 
 				{/* COOL OPTIMIZATION HACK FOR IMAGES */}
-				{imgLoading && (
+				{/* {imgLoading && ( */}
 					<div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center shimmer -z-10' />
-				)}
+				{/* )} */}
 
 				<img
 					// src={ORIGINAL_IMG_BASE_URL + trendingContent?.backdrop_path}
@@ -68,11 +69,11 @@ const HomeScreen = () => {
 				</div>
 			</div>
 
-			<div className='flex flex-col gap-10 bg-black py-10'>
+			{/* <div className='flex flex-col gap-10 bg-black py-10'>
 				{contentType === "movie"
 					? MOVIE_CATEGORIES.map((category) => <MovieSlider key={category} category={category} />)
 					: TV_CATEGORIES.map((category) => <MovieSlider key={category} category={category} />)}
-			</div>
+			</div> */}
 		</>
 	);
 };

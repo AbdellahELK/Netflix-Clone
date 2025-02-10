@@ -93,3 +93,13 @@ export const logout = async (req, res) => {
 
     }
 }
+
+export const checkAuth = async (req, res) => {
+    try {
+        console.log("req.user:", req.user);
+        res.status(200).json({ success: true, user: req.user });
+    } catch (error) {
+        console.error("Error during checking auth:", error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+}
