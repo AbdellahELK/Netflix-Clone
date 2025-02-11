@@ -13,15 +13,14 @@ function App() {
   console.log("auth is here: ", user);
 
   useEffect(() => {
-    // const fetchAuth = async () => {
-    //   try {
-    //     await checkAuth();
-    //   } catch (error) {
-    //     console.error("Error checking authentication:", error);
-    //   }
-    // };
-    // fetchAuth();
-    checkAuth();
+    const fetchAuth = async () => {
+      try {
+        await checkAuth();
+      } catch (error) {
+        console.error("Error checking authentication:", error);
+      }
+    };
+    fetchAuth();
   }, [checkAuth]);
 
   if (isCheckingAuth) {
