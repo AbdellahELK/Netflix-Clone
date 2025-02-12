@@ -27,7 +27,7 @@ const HomeScreen = () => {
 
 				{/* COOL OPTIMIZATION HACK FOR IMAGES */}
 				{imgLoading && (
-					<div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center shimmer -z-10' />
+					<div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center -z-10' />
 				)}
 
 				<img

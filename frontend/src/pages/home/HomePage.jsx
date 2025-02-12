@@ -6,9 +6,7 @@ import { useAuthStore } from '../../store/AuthStore';
 const HomePage = () => {
     const { user } = useAuthStore();
     return (
-        // <div className='hero-bg h-screen'>
         (user ? <HomeScreen /> : <AuthScreen />)
-        // </div>
     )
 }
 
