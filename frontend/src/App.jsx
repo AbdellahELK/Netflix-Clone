@@ -9,6 +9,8 @@ import { useEffect } from 'react';
 import { Loader } from 'lucide-react';
 import WatchPage from './pages/WatchPage.jsx';
 import SearchPage from './pages/SearchPage.jsx';
+import SearchHistoryPage from './pages/SearchHistoryPage.jsx';
+import NotFoundPage from './pages/home/NotFoundPage.jsx';
 
 function App() {
   const { user, checkAuth, isCheckingAuth } = useAuthStore();
@@ -43,6 +45,8 @@ function App() {
         <Route path="/signup" element={user ? <Navigate to="/" /> : <SignUpPage />} />
         <Route path="/watch/:id" element={!user ? <Navigate to="/login" /> : <WatchPage />} />
         <Route path="/search" element={!user ? <Navigate to="/login" /> : <SearchPage />} />
+        <Route path="/history" element={!user ? <Navigate to="/login" /> : <SearchHistoryPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
       <Toaster />
