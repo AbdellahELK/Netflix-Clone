@@ -21,11 +21,7 @@ const SignUpPage = () => {
       username,
       password
     })
-    console.log({
-      email: email,
-      username: username,
-      password: password,
-    })
+   
   }
   return (
     <>

@@ -18,7 +18,6 @@ const WatchPage = () => {
     const [similarContent, setSimilarContent] = useState([]);
     const { contentType } = useContentStore();
 
-    console.log(trailers)
 
     const sliderRef = useRef(null);
 

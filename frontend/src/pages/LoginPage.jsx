@@ -13,10 +13,7 @@ const LoginPage = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
     login({ username, password });
-    console.log({
-      username: username,
-      password: password,
-    })
+    
   }
   return (
     <>

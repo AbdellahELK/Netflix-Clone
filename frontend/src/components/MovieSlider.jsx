@@ -28,7 +28,6 @@ const MovieSlider = ({ category }) => {
         const getContent = async () => {
             try {
                 const res = await axios.get(`/api/v1/${contentType}/${category}`);
-                console.log("API Response:", res.data);
 
                 // Ensure content is always an array
                 if (Array.isArray(res.data.content)) {
@@ -56,8 +55,6 @@ const MovieSlider = ({ category }) => {
     const scrollRight = () => {
         sliderRef.current.scrollBy({ left: sliderRef.current.offsetWidth, behavior: "smooth" });
     };
-    console.log("Content:", content, "Type:", typeof content);
-    console.log("Is Array?", Array.isArray(content));
 
 
     return (
